@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Graph</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        #myDiv {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stock Analysis</h1>
+    <select id="yAxisSelector">
+        <option value="Change">Price Change (%)</option>
+        <option value="Sentiment">Average Sentiment</option>
+        <!-- Add more options as needed based on your export.csv -->
+    </select>
+    <div id="myDiv"></div>
+
+    <script>
+        const priceData = {{ price_data | safe }};
+        const sentimentData = {{ sentiment_data | safe }};
+
+        function plotGraph(yAxis) {
+            const xValues = priceData.map(stock => stock.Ticker);
+            const yValues = priceData.map(stock => stock[yAxis]);
+
+            const trace = {
+                x: xValues,
+                y: yValues,
+                mode: 'markers+text',
+                type: 'scatter',
+                text: xValues,
+                textposition: 'top center',
+                marker: { size: 12 }
+            };
+
+            const layout = {
+                title: `Stock ${yAxis}`,
+                xaxis: { title: 'Tickers' },
+                yaxis: { title: yAxis },
+                hovermode: 'closest'
+            };
+
+            Plotly.newPlot('myDiv', [trace], layout);
+        }
+
+        // Initial plot
+        plotGraph('Change');
+
+        // Change the graph when the dropdown value changes
+        document.getElementById('yAxisSelector').addEventListener('change', function() {
+            plotGraph(this.value);
+        });
+    </script>
+</body>
+</html>
