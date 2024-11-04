@@ -1,8 +1,6 @@
 import sys
 import subprocess
 import os
-import time
-import threading
 from PyQt5.QtWidgets import (
     QApplication,
     QWidget,
@@ -87,23 +85,25 @@ class Dashboard(QWidget):
         self.output_area.setReadOnly(True)
         self.layout.addWidget(self.output_area)
 
-        # Button to Run All Scripts Except plotone.py
-        self.run_all_button = QPushButton("Run All Scripts Except plotone.py", self)
+        # Button to Gather Data
+        self.run_all_button = QPushButton("Gather Data", self)
         self.run_all_button.clicked.connect(self.show_loading_and_run_scripts)
         self.layout.addWidget(self.run_all_button)
 
         # Button to Run plotone.py
-        self.run_plotone_button = QPushButton("Run plotone.py", self)
+        self.run_plotone_button = QPushButton("Plot Data", self)
         self.run_plotone_button.clicked.connect(self.run_plotone)
         self.layout.addWidget(self.run_plotone_button)
+
+        # New Button to Update Data
+        self.update_data_button = QPushButton("Update Data", self)
+        self.update_data_button.clicked.connect(self.run_update_script)
+        self.layout.addWidget(self.update_data_button)
 
         self.setLayout(self.layout)
 
         # Check for CSV files on startup
         self.check_csv_files()
-
-        # Start the update thread
-        self.start_update_thread()
 
     def check_csv_files(self):
         """Check if necessary CSV files exist and run scripts if not."""
@@ -118,7 +118,6 @@ class Dashboard(QWidget):
             "price.py",
             "sentiment.py",
             "compilesent.py",
-            # "plotone.py" is intentionally excluded
         ]
         
         self.thread = ScriptRunner(scripts)
@@ -128,7 +127,7 @@ class Dashboard(QWidget):
         self.thread.start()  # Start the thread
 
     def show_loading_and_run_scripts(self):
-        """Show loading message and then run all scripts."""
+        """Show loading message and then run all scripts.""" 
         self.output_area.clear()  # Clear previous output
         self.output_area.append("Loading data, please wait...")
 
@@ -139,7 +138,7 @@ class Dashboard(QWidget):
         QTimer.singleShot(1000, self.run_all_scripts)  # Delay for 1 second
 
     def run_all_scripts(self):
-        """Run all specified scripts except plotone.py and update the output area."""
+        """Run all specified scripts except plotone.py and update the output area.""" 
         scripts = [
             "export.py",
             "price.py",
@@ -154,12 +153,20 @@ class Dashboard(QWidget):
 
         self.thread.start()  # Start the thread
 
+    def run_update_script(self):
+        """Run update.py and display the output in the output area.""" 
+        self.output_area.clear()
+        self.output_area.append("Updating data, please wait...")
+
+        output = self.run_script("update.py")
+        self.output_area.append(output)
+
     def update_output(self, message):
-        """Update the output area with the script message."""
+        """Update the output area with the script message.""" 
         self.output_area.append(message)
 
     def on_scripts_finished(self):
-        """Handle actions after scripts have finished running."""
+        """Handle actions after scripts have finished running.""" 
         QMessageBox.information(self, "Done", "All scripts have been executed.")
         self.run_all_button.setEnabled(True)  # Re-enable the button
 
@@ -172,34 +179,12 @@ class Dashboard(QWidget):
         self.plotone_dialog.show()
 
     def run_script(self, script_name):
-        """Run a Python script and return the output."""
+        """Run a Python script and return the output.""" 
         try:
             result = subprocess.run(['python', script_name], check=True, capture_output=True, text=True)
             return result.stdout
         except subprocess.CalledProcessError as e:
             return f"Error running {script_name}: {e.stderr}"
-
-    def start_update_thread(self):
-        """Start a thread to check for updates every 2 minutes."""
-        self.update_thread = threading.Thread(target=self.update_loop)
-        self.update_thread.daemon = True  # Allows the thread to exit when the main program exits
-        self.update_thread.start()
-
-    def update_loop(self):
-        """Loop to check for updates."""
-        while True:
-            time.sleep(120)  # Wait for 2 minutes
-            self.check_for_updates()
-
-    def check_for_updates(self):
-        """Check if there are new articles and update news.csv if necessary."""
-        if not os.path.exists("news.csv"):
-            self.output_area.append("news.csv does not exist. Please run export.py first.")
-            return
-
-        # Run the update.py script
-        update_output = self.run_script("update.py")
-        self.output_area.append(update_output)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

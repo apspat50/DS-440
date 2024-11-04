@@ -3,51 +3,166 @@ import pandas as pd
 import plotly.express as px
 import plotly.io as pio
 import os
-from PyQt5.QtWidgets import QApplication, QVBoxLayout, QWidget, QComboBox, QPushButton, QLabel
+from PyQt5.QtWidgets import QApplication, QVBoxLayout, QWidget, QComboBox, QPushButton, QLabel, QHBoxLayout
 from PyQt5.QtWebEngineWidgets import QWebEngineView
-from PyQt5.QtCore import QUrl, pyqtSignal, QObject
+from PyQt5.QtCore import QUrl
+import subprocess 
 
-# Create a custom signal class
-class Communicate(QObject):
-    stock_clicked = pyqtSignal(str)  # Signal to emit the clicked stock ticker
+class PlotViewer(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Price Change vs Sentiment")
+        self.setGeometry(100, 100, 800, 400)
+        layout = QVBoxLayout()
+        self.browser = QWebEngineView()
+        layout.addWidget(self.browser)
+        self.setLayout(layout)
 
-# Function to create the plot and save it as HTML
-def create_plot(input_sentiment_csv, input_price_csv, y_variable, stock_clicked_signal):
-    # Read the CSV file containing average sentiment data
+    def update_plot(self, fig):
+        output_html_path = "templates/price_change_vs_sentiment.html"
+        os.makedirs(os.path.dirname(output_html_path), exist_ok=True)
+        pio.write_html(fig, file=output_html_path, auto_open=False)
+        self.browser.setUrl(QUrl.fromLocalFile(os.path.abspath(output_html_path)))
+
+class MainWindow(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Sentiment Analysis Grapher")
+        self.setGeometry(500, 100, 800, 800)
+        layout = QHBoxLayout()
+
+        # Left layout for Y-axis variable selector and first plot viewer
+        left_layout = QVBoxLayout()
+
+        # Create a horizontal layout for the first plot variable selector
+        variable_layout = QHBoxLayout()
+        self.y_variable_selector = QComboBox()
+        self.y_variable_selector.addItems(["Change", "Price", "Volume", "P/E"])
+        variable_layout.addWidget(QLabel("Select Plot 1 Variable:"))
+        variable_layout.addWidget(self.y_variable_selector)
+        left_layout.addLayout(variable_layout)
+
+        self.plot_viewer = PlotViewer()
+        left_layout.addWidget(self.plot_viewer)
+
+        self.plot_button = QPushButton("Generate Plot 1")
+        self.plot_button.clicked.connect(self.generate_plot)
+        left_layout.addWidget(self.plot_button)
+
+        layout.addLayout(left_layout)
+
+        # Right layout for ticker selector and second plot
+        right_layout = QVBoxLayout()
+
+        # Create a horizontal layout for the ticker selector
+        ticker_layout = QHBoxLayout()
+        self.ticker_selector = QComboBox()
+        self.populate_ticker_selector()
+        ticker_layout.addWidget(QLabel("Select Plot 2 Ticker:"))
+        ticker_layout.addWidget(self.ticker_selector)
+        right_layout.addLayout(ticker_layout)
+
+        self.plot_viewer2 = PlotViewer()
+        right_layout.addWidget(self.plot_viewer2)
+
+        self.plot_button2 = QPushButton("Generate Plot 2")
+        self.plot_button2.clicked.connect(self.generate_plot2)
+        right_layout.addWidget(self.plot_button2)
+
+        layout.addLayout(right_layout)
+        self.setLayout(layout)
+
+
+    def populate_ticker_selector(self):
+        input_sentiment_csv = "average_sentiment_per_ticker.csv"
+        try:
+            sentiment_df = pd.read_csv(input_sentiment_csv)
+            if 'Ticker' in sentiment_df.columns:
+                self.ticker_selector.addItems(sentiment_df['Ticker'].unique().tolist())
+            else:
+                print("Error: 'Ticker' column missing in sentiment data.")
+        except Exception as e:
+            print(f"Error reading sentiment CSV: {e}")
+
+    def generate_plot(self):
+        input_sentiment_csv = "average_sentiment_per_ticker.csv"
+        input_price_csv = "export.csv"
+        y_variable = self.y_variable_selector.currentText()
+        fig = create_plot(input_sentiment_csv, input_price_csv, y_variable)
+
+        if fig:
+            self.plot_viewer.update_plot(fig)
+
+    def generate_plot2(self):
+        ticker = self.ticker_selector.currentText()
+        
+        try:
+            subprocess.run(['python', 'tickernews.py', ticker], check=True, capture_output=True, text=True)
+            subprocess.run(['python', 'analyze.py', ticker], check=True, capture_output=True, text=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Error running scripts: {e}")
+            return
+
+        # Read generated sentiment CSV file
+        input_sentiment_csv = f"{ticker}_with_sentiment.csv"
+        try:
+            sentiment_df = pd.read_csv(input_sentiment_csv)
+        except Exception as e:
+            print(f"Error reading sentiment CSV: {e}")
+            return
+        
+        if 'Date' not in sentiment_df.columns or 'Combined_Sentiment' not in sentiment_df.columns:
+            print("Error: Required columns missing in sentiment data.")
+            return
+
+        # Check if there's only one article
+        if len(sentiment_df) == 1:
+            # Generate a single point plot if only one article is available
+            fig = px.scatter(
+                sentiment_df,
+                x='Date',
+                y='Combined_Sentiment',
+                title=f'Combined Sentiment for {ticker} (Only One Article)',
+                labels={'Combined_Sentiment': 'Combined Sentiment', 'Date': 'Date'},
+            )
+        else:
+            # Generate the plot for combined sentiment over time
+            fig = px.line(
+                sentiment_df,
+                x='Date',
+                y='Combined_Sentiment',
+                title=f'Combined Sentiment Over Time for {ticker}',
+                labels={'Combined_Sentiment': 'Combined Sentiment', 'Date': 'Date'},
+            )
+        
+        if fig:
+            self.plot_viewer2.update_plot(fig)
+
+
+def create_plot(input_sentiment_csv, input_price_csv, y_variable):
     try:
         sentiment_df = pd.read_csv(input_sentiment_csv)
-    except pd.errors.EmptyDataError:
-        print(f"Error: The file {input_sentiment_csv} is empty or cannot be read.")
-        return None
-
-    # Read the CSV file containing stock price data
-    try:
         price_df = pd.read_csv(input_price_csv)
-    except pd.errors.EmptyDataError:
-        print(f"Error: The file {input_price_csv} is empty or cannot be read.")
+    except pd.errors.EmptyDataError as e:
+        print(f"Error reading CSV: {e}")
         return None
 
-    # Ensure 'Ticker' and the selected variable exist in price_df
     if 'Ticker' not in price_df.columns or y_variable not in price_df.columns:
-        print(f"Error: The 'Ticker' or '{y_variable}' column is missing in {input_price_csv}.")
+        print(f"Error: Missing 'Ticker' or '{y_variable}' column.")
         return None
 
-    # Clean the 'Change' column: remove percentage signs and convert to numeric
-    price_df['Change'] = price_df['Change'].str.replace('%', '', regex=False)  # Remove percentage signs
-    price_df['Change'] = pd.to_numeric(price_df['Change'], errors='coerce')  # Convert to numeric
-
-    # Drop any rows in price_df with NaN values in the selected variable
+    # Clean and prepare data
+    price_df['Change'] = pd.to_numeric(price_df['Change'].str.replace('%', ''), errors='coerce')
     price_df.dropna(subset=['Change'], inplace=True)
 
-    # Merge the two DataFrames on 'Ticker' to combine sentiment and price change data
+    # Merge sentiment and price data without filtering by selected ticker
     combined_df = pd.merge(sentiment_df, price_df[['Ticker', y_variable]], on='Ticker', how='inner')
 
-    # Ensure 'Combined_Sentiment' exists in the merged DataFrame
     if 'Combined_Sentiment' not in combined_df.columns:
-        print(f"Error: The 'Combined_Sentiment' column is missing in the combined data.")
+        print(f"Error: 'Combined_Sentiment' column missing.")
         return None
 
-    # Create an interactive scatter plot with Plotly
+    # Generate Plotly scatter plot
     fig = px.scatter(
         combined_df,
         x='Combined_Sentiment',
@@ -57,104 +172,13 @@ def create_plot(input_sentiment_csv, input_price_csv, y_variable, stock_clicked_
         labels={'Combined_Sentiment': 'Average Sentiment', y_variable: y_variable},
     )
 
-    # Add vertical and horizontal lines for quadrants
     fig.add_hline(y=0, line_color='black', line_width=1)
     fig.add_vline(x=0, line_color='black', line_width=1)
+    fig.update_traces(textposition='top center', marker=dict(size=10))
 
-    # Show hover text for Tickers
-    fig.update_traces(textposition='top center')
-
-    # Register a click event
-    fig.update_traces(marker=dict(size=10),
-                      selector=dict(mode='markers+text'))
-    fig.for_each_trace(lambda trace: trace.on_click(
-        lambda trace, points: stock_clicked_signal.emit(points['text'][0])
-    ))
-
-    return fig  # Return the figure object instead of saving it
-
-class PlotViewer(QWidget):
-    def __init__(self):
-        super().__init__()
-
-        self.setWindowTitle("Price Change vs Sentiment")
-        self.setGeometry(100, 100, 800, 600)
-
-        # Layout for the viewer
-        layout = QVBoxLayout()
-
-        # Create a web view
-        self.browser = QWebEngineView()
-        layout.addWidget(self.browser)
-
-        self.setLayout(layout)
-
-    def update_plot(self, fig):
-        """Update the plot in the viewer."""
-        # Ensure the templates directory exists
-        output_html_path = "templates/price_change_vs_sentiment.html"
-        os.makedirs(os.path.dirname(output_html_path), exist_ok=True)
-
-        # Save the figure as an HTML file
-        pio.write_html(fig, file=output_html_path, auto_open=False)
-        
-        # Load the updated plot in the web view
-        self.browser.setUrl(QUrl.fromLocalFile(os.path.abspath(output_html_path)))
-
-class MainWindow(QWidget):
-    def __init__(self):
-        super().__init__()
-
-        self.setWindowTitle("Dynamic Y-Axis Plotter")
-        self.setGeometry(100, 100, 400, 200)
-
-        # Layout for the main window
-        layout = QVBoxLayout()
-
-        # ComboBox for selecting Y-axis variable
-        self.y_variable_selector = QComboBox()
-        self.y_variable_selector.addItems(["Price", "Change", "Volume", "P/E"])  # Specified variables
-        layout.addWidget(QLabel("Select Y-axis Variable:"))
-        layout.addWidget(self.y_variable_selector)
-
-        # Create the plot viewer
-        self.plot_viewer = PlotViewer()
-        layout.addWidget(self.plot_viewer)
-
-        # Button to generate plot
-        self.plot_button = QPushButton("Generate Plot")
-        self.plot_button.clicked.connect(self.generate_plot)
-        layout.addWidget(self.plot_button)
-
-        # Create signal instance
-        self.communicate = Communicate()
-        self.communicate.stock_clicked.connect(self.open_second_plot)
-
-        self.setLayout(layout)
-
-    def generate_plot(self):
-        # Path to the CSV files
-        input_sentiment_csv = "average_sentiment_per_ticker.csv"
-        input_price_csv = "export.csv"
-
-        # Get the selected Y-axis variable
-        y_variable = self.y_variable_selector.currentText()
-
-        # Create the plot with the selected Y variable
-        fig = create_plot(input_sentiment_csv, input_price_csv, y_variable, self.communicate.stock_clicked)
-
-        if fig:  # If the plot was created successfully
-            self.plot_viewer.update_plot(fig)  # Update the viewer with the new plot
-
-    def open_second_plot(self, ticker):
-        """Open the second plot based on the clicked stock ticker."""
-        print(f"Opening second plot for ticker: {ticker}")
-        # Call your second plotting script (plottwo.py) here
-        # For example:
-        os.system(f"python plottwo.py {ticker}")  # Adjust this line based on how your second script accepts the ticker
+    return fig
 
 if __name__ == "__main__":
-    # Start the PyQt application
     app = QApplication(sys.argv)
     main_window = MainWindow()
     main_window.show()

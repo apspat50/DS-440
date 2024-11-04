@@ -28,6 +28,11 @@ def fetch_and_export_news():
         # Define the output file path
         output_file_path = os.path.join(output_dir, "news.csv")
 
+        # Check if the CSV file already exists
+        if os.path.exists(output_file_path):
+            # Clear the existing file by opening it in write mode
+            open(output_file_path, 'w').close()
+
         # Open the CSV file for writing
         with open(output_file_path, 'w', newline='', encoding='utf-8') as csv_file:
             # Create a CSV DictWriter
