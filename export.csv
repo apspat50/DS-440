@@ -1,380 +1,83 @@
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BABA,Alibaba Group Holding Ltd ADR,Consumer Cyclical,Internet Retail,China,233702.15,25.5,97.58,-0.41%,8494660
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BIIB,Biogen Inc,Healthcare,Drug Manufacturers - General,USA,26464.97,22.88,181.69,-1.18%,1720067
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,MOH,Molina Healthcare Inc,Healthcare,Healthcare Plans,USA,18620.89,16.53,325.54,0.60%,1579518
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,DG,Dollar General Corp.,Consumer Defensive,Discount Stores,USA,17676.37,12.49,80.38,-1.25%,2867774
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BIDU,Baidu Inc ADR,Communication Services,Internet Content & Information,China,26224.97,11.75,89.79,0.35%,2647018
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,JD,JD.com Inc ADR,Consumer Cyclical,Internet Retail,China,54477.47,14.51,39.90,1.45%,10658602
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,HAL,Halliburton Co.,Energy,Oil & Gas Equipment & Services,USA,24939.95,9.38,28.25,1.44%,9242140
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,MCD,McDonald's Corp,Consumer Cyclical,Restaurants,USA,214014.27,25.91,295.21,1.06%,4131194
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,HPP,Hudson Pacific Properties Inc,Real Estate,REIT - Office,USA,621.41,,4.40,-5.38%,1533335
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,VALE,Vale S.A. ADR,Basic Materials,Other Industrial Metals & Mining,Brazil,46447.16,5.02,10.88,3.72%,59678937
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,REAL,Therealreal Inc,Consumer Cyclical,Luxury Goods,USA,317.91,,2.93,-1.35%,844519
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,ACIC,American Coastal Insurance Corp,Financial,Insurance - Property & Casualty,USA,583.10,8.46,12.11,-4.27%,388872
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,OLPX,Olaplex Holdings Inc,Consumer Cyclical,Specialty Retail,USA,1337.22,28.25,2.02,1.00%,1303324
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BCAB,BioAtla Inc,Healthcare,Biotechnology,USA,96.20,,1.99,4.19%,619281
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,APTV,Aptiv PLC,Consumer Cyclical,Auto Parts,Ireland,16290.62,5.24,69.31,1.46%,2383922
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,DLTR,Dollar Tree Inc,Consumer Defensive,Discount Stores,USA,14752.64,,66.6,3.03%,4637006
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,CRM,Salesforce Inc,Technology,Software - Application,USA,284991.75,51.31,294.72,1.15%,3526868
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BEN,"Franklin Resources, Inc.",Financial,Asset Management,USA,10653.51,12.55,20.37,0.69%,2344616
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,MGA,Magna International Inc.,Consumer Cyclical,Auto Parts,Canada,12062.11,12.20,41.98,-0.31%,1561539
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,NOW,ServiceNow Inc,Technology,Software - Application,USA,195875.09,147.92,950.85,-0.60%,1494356
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,INTU,Intuit Inc,Technology,Software - Application,USA,170772.29,58.39,609.27,0.88%,1000654
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BWA,BorgWarner Inc,Consumer Cyclical,Auto Parts,USA,7653.07,10.81,33.60,0.45%,1320319
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,LEA,Lear Corp.,Consumer Cyclical,Auto Parts,USA,5360.64,10.37,98.65,0.49%,1063803
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,GPN,"Global Payments, Inc.",Technology,Software - Infrastructure,USA,25222.64,18.17,99.13,-0.40%,1336244
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,VEEV,Veeva Systems Inc,Healthcare,Health Information Services,USA,34366.40,56.65,212.23,-0.18%,553710
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,ALV,Autoliv Inc.,Consumer Cyclical,Auto Parts,Sweden,7460.77,12.33,94.74,-0.32%,501248
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,GT,Goodyear Tire & Rubber Co,Consumer Cyclical,Auto Parts,USA,2401.48,,8.22,2.62%,4330727
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,TTD,Trade Desk Inc,Technology,Software - Application,USA,58251.45,235.18,119.19,-0.85%,3334249
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,VC,Visteon Corp.,Consumer Cyclical,Auto Parts,USA,2565.35,5.04,92.88,0.44%,389101
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,FTNT,Fortinet Inc,Technology,Software - Infrastructure,USA,61452.87,47.47,80.34,-0.35%,3111778
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,GTX,Garrett Motion Inc,Consumer Cyclical,Auto Parts,Switzerland,1588.89,7.34,7.44,0.68%,878888
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,ZM,Zoom Video Communications Inc,Technology,Software - Application,USA,22354.79,26.02,72.63,-0.04%,2071023
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,GOOG,Alphabet Inc,Communication Services,Internet Content & Information,USA,2103970.78,22.9,172.65,-0.02%,21745389
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,AAPL,Apple Inc,Technology,Consumer Electronics,USA,3344147.48,36.72,222.91,-1.33%,65247687
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,GOOGL,Alphabet Inc,Communication Services,Internet Content & Information,USA,2106672.05,22.72,171.29,0.11%,31778337
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,OPI,Office Properties Income Trust,Real Estate,REIT - Office,USA,101.88,6.92,1.91,-0.52%,803964
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,SVC,Service Properties Trust,Real Estate,REIT - Hotel & Motel,USA,600.52,,3.62,-2.69%,1961341
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,AMZN,Amazon.com Inc,Consumer Cyclical,Internet Retail,USA,2205886.92,42.42,197.93,6.19%,99585974
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,MSFT,Microsoft Corporation,Technology,Software - Infrastructure,USA,3081235.84,33.87,410.37,0.99%,24212844
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,META,Meta Platforms Inc,Communication Services,Internet Content & Information,USA,1433132.35,26.71,567.16,-0.07%,15281325
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,NVDA,NVIDIA Corp,Technology,Semiconductors,USA,3387408.8,63.57,135.4,1.99%,203827222
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,V,Visa Inc,Financial,Credit Services,USA,556692.55,30.21,290.74,0.31%,5470811
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,FSP,Franklin Street Properties Corp.,Real Estate,REIT - Office,USA,181.25,,1.75,-2.78%,215257
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,MU,Micron Technology Inc.,Technology,Semiconductors,USA,119644.14,160.08,107.91,0.99%,12241535
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,ALIT,Alight Inc.,Technology,Software - Application,USA,3763.44,,7.03,-0.85%,3978256
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,MRK,Merck & Co Inc,Healthcare,Drug Manufacturers - General,USA,263569.55,19.27,103.98,-1.79%,9622674
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,DIS,Walt Disney Co,Communication Services,Entertainment,USA,172345.46,36.44,95.03,-0.39%,6632043
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,NFLX,Netflix Inc,Communication Services,Entertainment,USA,323230.98,42.79,756.1,0.01%,2996031
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,PTON,Peloton Interactive Inc,Consumer Cyclical,Leisure,USA,2394.63,,6.28,2.28%,14359025
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,ADBE,Adobe Inc,Technology,Software - Infrastructure,USA,214626.82,40.77,482.8,0.99%,2851571
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,GNW,Genworth Financial Inc,Financial,Insurance - Life,USA,2911.88,94.13,6.74,-2.46%,2373016
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,AMD,Advanced Micro Devices Inc.,Technology,Semiconductors,USA,252855.12,188.25,156.23,1.82%,29688659
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,SNY,Sanofi ADR,Healthcare,Drug Manufacturers - General,France,136239.07,29.96,54.34,4.40%,3251130
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,QCOM,"Qualcomm, Inc",Technology,Semiconductors,USA,186938.56,21.42,165.27,1.54%,6496542
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,MQ,Marqeta Inc,Technology,Software - Infrastructure,USA,2694.36,,5.30,0.57%,2544130
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,TDOC,Teladoc Health Inc,Healthcare,Health Information Services,USA,1467.36,,8.57,-0.35%,3824440
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,CHCT,Community Healthcare Trust Inc,Real Estate,REIT - Healthcare Facilities,USA,494.42,,17.62,5.13%,510142
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,C,Citigroup Inc,Financial,Banks - Diversified,USA,116806.68,17.84,61.76,-1.97%,9690024
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,LLY,Lilly(Eli) & Co,Healthcare,Drug Manufacturers - General,USA,767294.68,89.58,818.93,-1.30%,5263124
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,DOW,Dow Inc,Basic Materials,Chemicals,USA,34835.72,33.32,49.70,-2.53%,5887619
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,ALC,Alcon Inc.,Healthcare,Medical Instruments & Supplies,Switzerland,46493.53,42.36,94.25,-0.15%,407577
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,LENZ,LENZ Therapeutics Inc.,Healthcare,Biotechnology,USA,743.05,,27.02,7.99%,117095
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,FFIE,Faraday Future Intelligent Electric Inc,Consumer Cyclical,Auto Manufacturers,USA,23.85,,2.16,8.00%,35683342
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,TM,Toyota Motor Corporation ADR,Consumer Cyclical,Auto Manufacturers,Japan,232795.1,7.0,172.83,-0.11%,234171
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BA,Boeing Co.,Industrials,Aerospace & Defense,USA,95827.18,,155.01,-0.12%,8140640
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,AI,C3.ai Inc,Technology,Software - Application,USA,3211.32,,25.28,1.12%,2219198
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,PLTR,Palantir Technologies Inc,Technology,Software - Infrastructure,USA,94691.07,246.73,41.92,0.87%,33636504
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BKR,Baker Hughes Co,Energy,Oil & Gas Equipment & Services,USA,37127.17,16.80,37.52,2.01%,5667186
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,GSC,Goldman Sachs Small Cap Core Equity ETF,Financial,Exchange Traded Fund,USA,,,51.90,-0.06%,22046
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,LXRX,Lexicon Pharmaceuticals Inc,Healthcare,Biotechnology,USA,650.68,,1.80,-2.17%,3162697
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,REFI,Chicago Atlantic Real Estate Finance Inc,Real Estate,REIT - Mortgage,USA,298.62,7.71,15.22,-1.23%,63141
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,MIRA,Mira Pharmaceuticals Inc,Healthcare,Drug Manufacturers - General,USA,19.07,,1.29,14.16%,5258843
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,CGC,Canopy Growth Corporation,Healthcare,Drug Manufacturers - Specialty & Generic,Canada,461.64,,5.44,10.79%,11109340
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,DELL,Dell Technologies Inc,Technology,Computer Hardware,USA,89277.68,22.53,122.55,1.64%,4036131
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,TSLA,Tesla Inc,Consumer Cyclical,Auto Manufacturers,USA,796457.62,68.21,248.98,-0.35%,57438358
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,NEM,Newmont Corp,Basic Materials,Gold,USA,55123.75,,48.42,-1.69%,28257243
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,LYFT,Lyft Inc,Technology,Software - Application,USA,5500.25,,13.41,-2.69%,17613484
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,LGVN,Longeveron Inc,Healthcare,Biotechnology,USA,14.03,,2.21,6.76%,373159
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,UAL,United Airlines Holdings Inc,Industrials,Airlines,USA,24547.60,9.00,74.64,0.17%,7829647
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,SMMT,Summit Therapeutics Inc,Healthcare,Biotechnology,USA,15399.04,,21.26,9.25%,2530007
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,VZ,Verizon Communications Inc,Communication Services,Telecom Services,USA,174189.94,17.84,41.38,-1.15%,19715242
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,CVX,Chevron Corp,Energy,Oil & Gas Integrated,USA,287947.24,16.85,153.07,2.86%,11724520
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,DOUG,Douglas Elliman Inc,Real Estate,Real Estate Services,USA,166.21,,1.81,-0.55%,473155
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,OLN,Olin Corp.,Basic Materials,Chemicals,USA,4869.68,33.65,41.43,-8.02%,4433972
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,SAIA,Saia Inc.,Industrials,Trucking,USA,12275.27,32.97,461.65,11.39%,1116526
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,CL,Colgate-Palmolive Co.,Consumer Defensive,Household & Personal Products,USA,78121.98,27.47,95.61,-4.14%,7978130
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,SMR,NuScale Power Corporation,Industrials,Specialty Industrial Machinery,USA,4704.75,,19.01,-0.68%,9905294
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,NNE,Nano Nuclear Energy Inc,Industrials,Specialty Industrial Machinery,USA,580.3,,19.26,-1.53%,3740335
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,OKLO,Oklo Inc,Utilities,Utilities - Regulated Electric,USA,2552.77,,21.67,-3.52%,19887929
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BLMN,Bloomin Brands Inc,Consumer Cyclical,Restaurants,USA,1356.12,61.81,15.96,-0.31%,999652
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,PRLD,Prelude Therapeutics Inc,Healthcare,Biotechnology,USA,83.63,,1.52,-1.94%,273769
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,VRTS,Virtus Investment Partners Inc,Financial,Asset Management,USA,1513.28,12.99,213.74,0.37%,28901
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,IBM,International Business Machines Corp.,Technology,Information Technology Services,USA,197743.27,31.24,214.67,-1.70%,8480957
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,DRI,"Darden Restaurants, Inc.",Consumer Cyclical,Restaurants,USA,18790.60,18.47,159.92,-1.63%,691286
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,HFWA,Heritage Financial Corp.,Financial,Banks - Regional,USA,770.73,20.76,22.34,-0.09%,127156
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,PSA,Public Storage.,Real Estate,REIT - Industrial,USA,58866.23,31.49,336.34,-0.61%,554724
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,XOM,Exxon Mobil Corp,Energy,Oil & Gas Integrated,USA,502699.94,14.33,114.95,-1.57%,20929435
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,F,Ford Motor Co,Consumer Cyclical,Auto Manufacturers,USA,40340.92,11.66,10.22,-0.68%,43428858
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,JNJ,Johnson & Johnson,Healthcare,Drug Manufacturers - General,USA,387337.92,26.59,160.88,-1.70%,6396742
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BHC,Bausch Health Companies Inc,Healthcare,Drug Manufacturers - Specialty & Generic,Canada,2951.48,,8.04,-0.99%,612072
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,EW,Edwards Lifesciences Corp,Healthcare,Medical Devices,USA,41794.51,10.01,69.38,-1.38%,8171661
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,HESM,Hess Midstream LP,Energy,Oil & Gas Midstream,USA,3242.67,15.44,35.47,-0.37%,666283
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,CLX,Clorox Co.,Consumer Defensive,Household & Personal Products,USA,19377.85,69.96,156.69,-1.44%,1040124
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,PHAT,Phathom Pharmaceuticals Inc,Healthcare,Biotechnology,USA,1096.05,,16.05,-0.99%,1114863
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,EXAS,Exact Sciences Corp.,Healthcare,Diagnostics & Research,USA,12769.45,,69.11,-1.64%,864851
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,COST,Costco Wholesale Corp,Consumer Defensive,Discount Stores,USA,390104.62,52.97,877.31,0.36%,1624360
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,NVO,Novo Nordisk ADR,Healthcare,Drug Manufacturers - General,Denmark,373703.86,38.42,111.94,-0.01%,4554064
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,HIMS,Hims & Hers Health Inc,Consumer Defensive,Household & Personal Products,USA,4703.46,290.51,21.73,0.98%,3964950
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BIT,BlackRock Multi-Sector Income Trust,Financial,Closed-End Fund - Debt,USA,569.11,24.53,14.72,0.03%,63254
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,VKTX,Viking Therapeutics Inc,Healthcare,Biotechnology,USA,8695.66,,78.03,6.57%,9154440
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,SPY,SPDR S&P 500 ETF Trust,Financial,Exchange Traded Fund,USA,,,571.04,0.42%,45550529
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,QQQ,Invesco QQQ Trust Series 1,Financial,Exchange Traded Fund,USA,,,487.43,0.74%,33638840
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,COMP,Compass Inc,Real Estate,Real Estate Services,USA,2958.41,,5.64,-0.35%,3390965
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,INTC,Intel Corp,Technology,Semiconductors,USA,106947.69,,23.2,7.81%,172772031
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,SHOP,Shopify Inc,Technology,Software - Application,Canada,102003.75,80.60,79.05,-0.96%,3833059
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,EVLV,Evolv Technologies Holdings Inc,Industrials,Security & Protection Services,USA,389.15,,2.47,-39.76%,22445632
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BW,Babcock & Wilcox Enterprises Inc,Industrials,Specialty Industrial Machinery,USA,216.67,,2.35,-2.08%,1485761
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,ROOT,Root Inc,Financial,Insurance - Property & Casualty,USA,567.15,,37.81,-2.63%,149858
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,PFE,Pfizer Inc,Healthcare,Drug Manufacturers - General,USA,157996.29,37.83,28.09,-0.74%,46846876
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,JPM,JPMorgan Chase & Co,Financial,Banks - Diversified,USA,630536.89,12.4,222.94,0.46%,6922471
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,SRPT,Sarepta Therapeutics Inc,Healthcare,Biotechnology,USA,12506.82,324.20,131.14,-0.67%,849647
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,TDS,"Telephone And Data Systems, Inc.",Communication Services,Telecom Services,USA,3274.74,,28.98,2.77%,904572
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,SMCI,Super Micro Computer Inc,Technology,Computer Hardware,USA,13650.49,13.09,26.05,-10.51%,102415045
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,CSCO,"Cisco Systems, Inc",Technology,Communication Equipment,USA,224172.57,21.87,55.5,1.33%,19233622
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,BLK,Blackrock Inc.,Financial,Asset Management,USA,144288.99,24.04,974.07,-1.01%,433605
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,SBUX,Starbucks Corp,Consumer Cyclical,Restaurants,USA,113381.21,29.9,98.87,1.20%,8858990
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,CMG,Chipotle Mexican Grill,Consumer Cyclical,Restaurants,USA,83871.14,54.45,58.59,5.06%,19871777
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,KDP,Keurig Dr Pepper Inc,Consumer Defensive,Beverages - Non-Alcoholic,USA,46906.04,20.93,34.58,-1.03%,9207263
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,EXPI,eXp World Holdings Inc,Real Estate,Real Estate Services,USA,1970.82,,12.82,0.23%,545921
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,VRT,Vertiv Holdings Co,Industrials,Electrical Equipment & Parts,USA,39245.98,71.13,106.9,-2.19%,5002665
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,WDC,Western Digital Corp.,Technology,Computer Hardware,USA,24006.78,42.33,69.45,4.72%,17638702
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,KO,Coca-Cola Co,Consumer Defensive,Beverages - Non-Alcoholic,USA,278763.5,27.0,65.01,-0.46%,12159573
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,MKC,"McCormick & Co., Inc.",Consumer Defensive,Packaged Foods,USA,20894.51,26.49,77.86,-1.16%,1129184
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,HLT,Hilton Worldwide Holdings Inc,Consumer Cyclical,Lodging,USA,57558.90,50.65,236.11,0.38%,1055854
-No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,MAR,"Marriott International, Inc",Consumer Cyclical,Lodging,USA,73511.56,26.05,260.57,0.21%,1481636
-1,GMED,Globus Medical Inc,Healthcare,Medical Devices,USA,10324.03,252.89,74.88,1.82%,686225
-1,LIVN,LivaNova PLC,Healthcare,Medical Devices,United Kingdom,2750.05,119.97,51.13,-0.95%,441992
-1,BDX,Becton Dickinson & Co,Healthcare,Medical Instruments & Supplies,USA,68474.63,48.4,235.24,0.71%,1278381
-1,BROS,Dutch Bros Inc,Consumer Cyclical,Restaurants,USA,5193.42,132.22,33.4,0.85%,2271953
-1,UPS,"United Parcel Service, Inc",Industrials,Integrated Freight & Logistics,USA,114815.69,20.27,134.05,-0.01%,2265893
-1,TSM,Taiwan Semiconductor Manufacturing ADR,Technology,Semiconductors,Taiwan,1000617.46,30.89,192.95,1.26%,12681171
-1,ROST,"Ross Stores, Inc",Consumer Cyclical,Apparel Retail,USA,46579.73,22.58,140.06,0.24%,2255671
-1,CVS,CVS Health Corp,Healthcare,Healthcare Plans,USA,69399.55,9.93,55.81,-1.15%,13585311
-1,DHI,D.R. Horton Inc,Consumer Cyclical,Residential Construction,USA,54217.51,11.67,167.64,-0.80%,4348185
-1,GM,General Motors Company,Consumer Cyclical,Auto Manufacturers,USA,56256.19,5.44,50.96,0.39%,10285946
-1,STLA,Stellantis N.V,Consumer Cyclical,Auto Manufacturers,Netherlands,37946.98,2.92,13.7,0.59%,7358058
-1,UNH,Unitedhealth Group Inc,Healthcare,Healthcare Plans,USA,526936.17,36.87,567.56,0.54%,2548309
-1,XHB,SPDR Homebuilders ETF,Financial,Exchange Traded Fund,USA,,,114.6,0.34%,1553508
-1,BURL,Burlington Stores Inc,Consumer Cyclical,Apparel Retail,USA,15134.69,36.51,242.7,-2.05%,903821
-1,HUM,Humana Inc,Healthcare,Healthcare Plans,USA,31743.1,23.08,260.71,1.12%,1424061
-1,KOS,Kosmos Energy Ltd,Energy,Oil & Gas E&P,USA,1699.35,6.86,3.68,-2.13%,9715363
-1,LRCX,Lam Research Corp,Technology,Semiconductor Equipment & Materials,USA,96826.57,24.2,74.8,0.61%,10317061
-1,ASML,ASML Holding NV,Technology,Semiconductor Equipment & Materials,Netherlands,265452.27,35.36,674.73,0.32%,1800939
-1,SNOW,Snowflake Inc,Technology,Software - Application,USA,38938.14,,115.49,0.58%,4632653
-1,BSX,Boston Scientific Corp,Healthcare,Medical Devices,USA,122554.76,69.16,83.62,-0.48%,7051528
-1,RIVN,Rivian Automotive Inc,Consumer Cyclical,Auto Manufacturers,USA,10345.53,,10.18,0.79%,20075259
-1,EHTH,eHealth Inc,Financial,Insurance Brokers,USA,138.08,,4.86,-3.38%,130344
-1,RYAN,Ryan Specialty Holdings Inc,Financial,Insurance - Specialty,USA,17368.27,87.45,66.71,1.28%,949617
-1,CNXC,Concentrix Corp,Technology,Information Technology Services,USA,2627.34,13.44,41.51,-2.35%,724775
-1,CAR,Avis Budget Group Inc,Industrials,Rental & Leasing Services,USA,3641.63,8.41,92.06,10.92%,2490720
-1,SIRI,Sirius XM Holdings Inc,Communication Services,Entertainment,USA,9727.22,8.24,27.65,3.71%,10578120
-1,O,Realty Income Corp,Real Estate,REIT - Retail,USA,5939.66,54.53,58.88,-0.83%,4611656
-1,QDEL,QuidelOrtho Corporation,Healthcare,Medical Devices,USA,2701.45,,39.1,2.76%,418992
-1,FIVN,Five9 Inc,Technology,Software - Infrastructure,USA,2425.88,,30.96,4.84%,1336291
-1,WBA,Walgreens Boots Alliance Inc,Healthcare,Pharmaceutical Retailers,USA,8179.28,,9.46,0.00%,12188719
-1,ZI,ZoomInfo Technologies Inc,Technology,Software - Application,USA,4243.49,315.6,11.33,2.53%,9357630
-1,BRO,"Brown & Brown, Inc",Financial,Insurance Brokers,USA,29654.48,28.37,104.17,-0.45%,923726
-1,AJG,Arthur J. Gallagher & Co,Financial,Insurance Brokers,USA,61344.74,53.32,280.4,-0.28%,738425
-1,WTW,Willis Towers Watson Public Limited Co,Financial,Insurance Brokers,United Kingdom,29858.82,,299.3,-0.96%,710112
-1,MMC,"Marsh & McLennan Cos., Inc",Financial,Insurance Brokers,USA,108028.76,27.02,219.1,0.39%,1781025
-1,COP,Conoco Phillips,Energy,Oil & Gas E&P,USA,122188.21,12.81,107.84,-1.55%,7427989
-1,OXY,Occidental Petroleum Corp,Energy,Oil & Gas E&P,USA,44407.61,12.22,49.57,-1.08%,13246499
-1,AON,Aon plc,Financial,Insurance Brokers,Ireland,78285.45,30.77,364.42,-0.67%,734473
-1,HD,"Home Depot, Inc",Consumer Cyclical,Home Improvement Retail,USA,388808.22,26.42,392.59,-0.29%,3277917
-1,NYT,New York Times Co,Communication Services,Publishing,USA,9498.66,34.94,56.83,1.77%,1603870
-1,PYPL,PayPal Holdings Inc,Financial,Credit Services,USA,75444.04,18.46,77.25,-2.59%,16470371
-1,CHWY,Chewy Inc,Consumer Cyclical,Internet Retail,USA,11123.87,32.59,27.12,0.56%,3198995
-1,ADC,Agree Realty Corp,Real Estate,REIT - Retail,USA,7620.45,40.91,73.93,-0.43%,952411
-1,HOG,"Harley-Davidson, Inc",Consumer Cyclical,Recreational Vehicles,USA,4184.26,7.18,31.87,-0.25%,1910654
-1,SPGI,S&P Global Inc,Financial,Financial Data & Stock Exchanges,USA,150892.1,42.64,483.31,0.61%,940299
-1,AGNC,AGNC Investment Corp,Real Estate,REIT - Mortgage,USA,7859.5,6.52,9.31,0.00%,23907613
-1,RKLB,Rocket Lab USA Inc,Industrials,Aerospace & Defense,USA,6053.27,,11.42,6.73%,10997701
-1,ARW,Arrow Electronics Inc,Technology,Electronics & Computer Distribution,USA,6491.59,13.53,121.03,1.99%,675405
-1,INVH,Invitation Homes Inc,Real Estate,REIT - Residential,USA,19229.69,77.4,31.4,-0.03%,3993079
-1,MAA,"Mid-America Apartment Communities, Inc",Real Estate,REIT - Residential,USA,17637.31,33.67,149.17,-1.43%,1027696
-1,BYD,Boyd Gaming Corp,Consumer Cyclical,Resorts & Casinos,USA,6013.62,13.12,68.66,-0.91%,742277
-1,RDDT,Reddit Inc,Communication Services,Internet Content & Information,USA,16284.26,,112.98,-5.30%,12012591
-1,VFC,VF Corp,Consumer Cyclical,Apparel Manufacturing,USA,8329.7,,21.05,1.64%,5309718
-1,ANET,Arista Networks Inc,Technology,Computer Hardware,USA,126306.62,51.09,394.17,2.00%,1312257
-1,MDB,MongoDB Inc,Technology,Software - Infrastructure,USA,20189.1,,271.85,0.54%,1035495
-1,ORCL,Oracle Corp,Technology,Software - Infrastructure,USA,477255.54,43.86,170.02,1.30%,5679918
-1,WMT,Walmart Inc,Consumer Defensive,Discount Stores,USA,662598.74,42.7,82.19,0.29%,12178943
-1,AA,Alcoa Corp,Basic Materials,Aluminum,USA,10606.35,,40.57,1.20%,3863832
-1,GS,"Goldman Sachs Group, Inc",Financial,Capital Markets,USA,164504.62,15.24,519.35,0.30%,1625083
-1,PEP,PepsiCo Inc,Consumer Defensive,Beverages - Non-Alcoholic,USA,226517.36,24.41,165.59,-0.30%,6339028
-1,AVGO,Broadcom Inc,Technology,Semiconductors,USA,785003.58,147.04,168.92,-0.50%,17831695
-1,EPR,EPR Properties,Real Estate,REIT - Specialty,USA,3356.13,19.36,44.84,-1.17%,474017
-1,PG,Procter & Gamble Co,Consumer Defensive,Household & Personal Products,USA,388629.13,28.48,165.1,-0.05%,5454943
-1,BAC,Bank Of America Corp,Financial,Banks - Diversified,USA,319959.71,15.18,41.76,-0.14%,31207765
-1,MNST,Monster Beverage Corp,Consumer Defensive,Beverages - Non-Alcoholic,USA,50860.61,32.56,52.3,-0.72%,6325107
-1,CELH,Celsius Holdings Inc,Consumer Defensive,Beverages - Non-Alcoholic,USA,7678.45,30.85,31.48,4.65%,5781301
-1,LMT,Lockheed Martin Corp,Industrials,Aerospace & Defense,USA,129101.46,19.74,545.35,-0.13%,792630
-1,KSS,Kohl's Corp,Consumer Cyclical,Department Stores,USA,1972.02,7.09,18.1,-2.06%,6619200
-1,FOUR,Shift4 Payments Inc,Technology,Software - Infrastructure,USA,8032.02,54.76,90.55,0.12%,840851
-1,YUMC,Yum China Holdings Inc,Consumer Cyclical,Restaurants,China,17640.53,21.78,45.07,2.18%,2833209
-1,YUM,Yum Brands Inc,Consumer Cyclical,Restaurants,USA,37544.14,24.24,132.34,0.90%,1888551
-1,ABNB,Airbnb Inc,Consumer Cyclical,Travel Services,USA,88640.74,18.58,136.46,1.24%,3707357
-1,APO,Apollo Global Management Inc,Financial,Asset Management,USA,79037.49,15.14,141.0,-1.58%,3130559
-1,ARM,Arm Holdings plc. ADR,Technology,Semiconductors,United Kingdom,148271.04,359.73,141.48,0.13%,4703320
-1,CEG,Constellation Energy Corporation,Utilities,Utilities - Renewable,USA,79213.48,34.4,258.1,-1.85%,2788269
-1,CME,CME Group Inc,Financial,Financial Data & Stock Exchanges,USA,79895.96,23.52,223.61,-0.78%,1318587
-1,DUK,Duke Energy Corp,Utilities,Utilities - Regulated Electric,USA,87011.5,20.25,112.68,-2.25%,3712393
-1,GILD,"Gilead Sciences, Inc",Healthcare,Drug Manufacturers - General,USA,112304.96,109.4,89.51,0.78%,6484782
-1,HMC,Honda Motor ADR,Consumer Cyclical,Auto Manufacturers,Japan,48690.57,6.46,30.29,-0.07%,514465
-1,MCHP,"Microchip Technology, Inc",Technology,Semiconductors,USA,40923.67,29.89,74.81,1.96%,5472915
-1,NRG,NRG Energy Inc,Utilities,Utilities - Independent Power Producers,USA,17168.7,9.3,86.72,-4.07%,2681753
-1,NWS,News Corp,Communication Services,Entertainment,USA,15911.74,62.7,29.08,0.14%,422429
-1,NWSA,News Corp,Communication Services,Entertainment,USA,15930.67,58.9,27.32,0.26%,2326668
-1,PARA,Paramount Global,Communication Services,Entertainment,USA,7788.48,,10.98,0.37%,6575116
-1,VERX,Vertex Inc,Technology,Software - Application,USA,6662.62,349.09,42.17,1.59%,367529
-1,VRTX,"Vertex Pharmaceuticals, Inc",Healthcare,Biotechnology,USA,120355.54,,471.12,-1.02%,1352702
-1,WBD,Warner Bros. Discovery Inc,Communication Services,Entertainment,USA,20427.41,,8.23,1.23%,26742204
-1,COIN,Coinbase Global Inc,Financial,Financial Data & Stock Exchanges,USA,46711.2,31.26,182.88,2.03%,14424754
-1,BX,Blackstone Inc,Financial,Asset Management,USA,204083.8,57.8,168.14,0.23%,3453215
-1,ROIC,Retail Opportunity Investments Corp,Real Estate,REIT - Retail,USA,2115.17,34.08,15.59,0.58%,652719
-1,BKH,Black Hills Corporation,Utilities,Utilities - Regulated Gas,USA,3953.15,14.31,57.92,-2.15%,357564
-1,ES,Eversource Energy,Utilities,Utilities - Regulated Electric,USA,22001.37,,63.67,-3.31%,2303866
-1,NESR,National Energy Services Reunited Corp,Energy,Oil & Gas Equipment & Services,USA,849.37,,9.05,-1.63%,62512
-1,SYNA,Synaptics Inc,Technology,Semiconductors,USA,2866.51,22.67,70.22,2.26%,250391
-1,NKE,"Nike, Inc",Consumer Cyclical,Footwear & Accessories,USA,117601.09,22.39,78.06,1.21%,9616700
-1,USNA,Usana Health Sciences Inc,Consumer Defensive,Packaged Foods,USA,717.19,13.19,37.29,0.95%,76673
-1,VST,Vistra Corp,Utilities,Utilities - Independent Power Producers,USA,39268.27,93.76,119.51,-4.36%,5889410
-1,AES,AES Corp,Utilities,Utilities - Diversified,USA,9330.2,10.23,14.71,-10.79%,30887645
-1,TLN,Talen Energy Corp,Utilities,Utilities - Independent Power Producers,USA,1725.41,12.23,173.88,-4.12%,923790
-1,CSLR,Complete Solaria Inc,Technology,Solar,USA,138.72,,2.14,1.90%,291027
-1,BLTE,Belite Bio Inc ADR,Healthcare,Biotechnology,USA,2139.64,,69.9,4.94%,134196
-1,ATSG,Air Transport Services Group Inc,Industrials,Airlines,USA,1154.85,68.42,17.4,0.93%,421795
-1,MELI,MercadoLibre Inc,Consumer Cyclical,Internet Retail,USA,105084.32,74.28,2054.9,0.87%,344753
-1,TGI,Triumph Group Inc,Industrials,Aerospace & Defense,USA,1053.26,,13.73,-0.79%,857148
-1,PDD,PDD Holdings Inc ADR,Consumer Cyclical,Internet Retail,China,167430.11,13.0,120.56,-0.02%,3697042
-1,BKNG,Booking Holdings Inc,Consumer Cyclical,Travel Services,USA,159628.92,32.22,4749.11,1.56%,519724
-1,KHC,Kraft Heinz Co,Consumer Defensive,Packaged Foods,USA,40531.58,30.07,33.49,0.09%,5676491
-1,SOLV,Solventum Corp,Healthcare,Health Information Services,USA,12493.92,,72.46,-0.17%,689830
-1,GEHC,GE HealthCare Technologies Inc,Healthcare,Medical Devices,USA,39543.19,23.81,86.95,-0.46%,3383318
-1,GRNT,Granite Ridge Resources Inc,Energy,Oil & Gas E&P,USA,741.69,13.5,5.8,-2.19%,323021
+Ticker,No.,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
+NOK,1.0,Nokia Corp ADR,Technology,Communication Equipment,Finland,23192.42,52.32,4.25,2.49%,28583800.0
+ELF,1.0,e.l.f. Beauty Inc,Consumer Defensive,Household & Personal Products,USA,6353.09,60.99,112.78,-7.34%,9902638.0
+TSM,1.0,Taiwan Semiconductor Manufacturing ADR,Technology,Semiconductors,Taiwan,968620.53,29.91,186.78,-1.52%,8217854.0
+PYPL,1.0,PayPal Holdings Inc,Financial,Credit Services,USA,84955.14,20.25,84.74,0.77%,4256920.0
+FICO,1.0,Fair Isaac Corp,Technology,Software - Application,USA,56006.08,112.5,2300.24,0.69%,48821.0
+MDT,1.0,Medtronic Plc,Healthcare,Medical Devices,Ireland,107745.87,25.61,84.01,-1.16%,4648110.0
+AMZN,1.0,Amazon.com Inc,Consumer Cyclical,Internet Retail,USA,2128027.92,43.37,202.38,-1.09%,22956994.0
+NVDA,1.0,NVIDIA Corp,Technology,Semiconductors,USA,3566161.42,68.26,145.38,-1.11%,210400211.0
+MRK,1.0,Merck & Co Inc,Healthcare,Drug Manufacturers - General,USA,246841.61,20.44,97.58,1.08%,6376920.0
+MSFT,1.0,Microsoft Corporation,Technology,Software - Infrastructure,USA,3090605.64,34.31,415.69,-0.50%,10244895.0
+SYM,1.0,Symbotic Inc,Industrials,Specialty Industrial Machinery,USA,21508.25,,36.73,-5.87%,2400987.0
+DAL,1.0,"Delta Air Lines, Inc",Industrials,Airlines,USA,40859.21,8.79,63.32,-2.21%,8364025.0
+RGLD,1.0,"Royal Gold, Inc",Basic Materials,Gold,USA,9755.67,33.95,148.36,0.32%,142109.0
+ZETA,1.0,Zeta Global Holdings Corp,Technology,Software - Infrastructure,USA,5667.5,,23.87,8.39%,20999018.0
+CDE,1.0,Coeur Mining Inc,Basic Materials,Gold,USA,2593.07,,6.49,-2.48%,5618307.0
+HL,1.0,Hecla Mining Co,Basic Materials,Other Precious Metals & Mining,USA,3566.52,,5.6,-1.78%,7052663.0
+LZB,1.0,La-Z-Boy Inc,Consumer Cyclical,"Furnishings, Fixtures & Appliances",USA,1786.02,14.7,42.7,0.92%,647235.0
+INOD,1.0,Innodata Inc,Technology,Information Technology Services,USA,1278.47,74.32,44.08,-1.33%,868239.0
+GCT,1.0,GigaCloud Technology Inc,Technology,Software - Infrastructure,USA,946.45,7.29,23.1,-4.35%,1083562.0
+DBGI,1.0,Digital Brands Group Inc,Consumer Cyclical,Apparel Retail,USA,5.25,,0.14,16.64%,309332496.0
+GS,1.0,"Goldman Sachs Group, Inc",Financial,Capital Markets,USA,182827.35,17.09,582.42,0.18%,1015874.0
+WPM,1.0,Wheaton Precious Metals Corp,Basic Materials,Gold,Canada,39891.23,46.9,62.97,0.61%,792875.0
+TJX,1.0,"TJX Companies, Inc",Consumer Cyclical,Apparel Retail,USA,135215.04,28.95,119.89,0.27%,6090784.0
+TSLA,1.0,Tesla Inc,Consumer Cyclical,Auto Manufacturers,USA,1098996.04,93.79,342.36,-1.05%,56595368.0
+AI,1.0,C3.ai Inc,Technology,Software - Application,USA,4104.02,,32.31,-1.98%,7915516.0
+META,1.0,Meta Platforms Inc,Communication Services,Internet Content & Information,USA,1424167.41,26.57,564.25,0.56%,6381054.0
+RBRK,1.0,Rubrik Inc,Technology,Software - Infrastructure,USA,8248.87,,45.41,2.71%,679530.0
+PYCR,1.0,Paycor HCM Inc,Technology,Software - Application,USA,2958.19,,16.47,1.89%,469170.0
+FTNT,1.0,Fortinet Inc,Technology,Software - Infrastructure,USA,70266.46,46.21,91.68,0.98%,2777028.0
+ROST,1.0,"Ross Stores, Inc",Consumer Cyclical,Apparel Retail,USA,46161.44,22.43,139.14,-0.09%,2612287.0
+BJ,1.0,BJ's Wholesale Club Holdings Inc,Consumer Defensive,Discount Stores,USA,11336.04,21.58,85.5,-0.96%,1951319.0
+WMT,1.0,Walmart Inc,Consumer Defensive,Discount Stores,USA,698999.86,35.71,86.96,0.41%,12420472.0
+COST,1.0,Costco Wholesale Corp,Consumer Defensive,Discount Stores,USA,411145.64,56.02,927.94,-0.24%,867422.0
+TGT,1.0,Target Corp,Consumer Defensive,Discount Stores,USA,56087.69,12.57,121.75,-21.95%,56560788.0
+DELL,1.0,Dell Technologies Inc,Technology,Computer Hardware,USA,97338.05,24.57,133.62,-1.68%,3559041.0
+INTC,1.0,Intel Corp,Technology,Semiconductors,USA,103029.37,,23.89,-1.29%,36037658.0
+GH,1.0,Guardant Health Inc,Healthcare,Diagnostics & Research,USA,3778.3,,30.58,-0.33%,1063145.0
+DGX,1.0,"Quest Diagnostics, Inc",Healthcare,Diagnostics & Research,USA,18037.1,21.69,161.6,0.27%,393396.0
+HIMS,1.0,Hims & Hers Health Inc,Consumer Defensive,Household & Personal Products,USA,4772.67,50.53,21.84,-7.16%,16132297.0
+QCOM,1.0,"Qualcomm, Inc",Technology,Semiconductors,USA,171571.62,17.2,154.43,-6.24%,10692258.0
+ETN,1.0,Eaton Corporation plc,Industrials,Specialty Industrial Machinery,Ireland,142633.61,38.38,360.92,-0.76%,839779.0
+SPGI,1.0,S&P Global Inc,Financial,Financial Data & Stock Exchanges,USA,156111.34,44.39,503.1,0.16%,596664.0
+VRT,1.0,Vertiv Holdings Co,Industrials,Electrical Equipment & Parts,USA,51710.01,91.68,137.77,-2.25%,8640169.0
+HOOD,1.0,Robinhood Markets Inc,Financial,Capital Markets,USA,31907.1,61.51,36.1,2.43%,30660651.0
+IBKR,1.0,Interactive Brokers Group Inc,Financial,Capital Markets,USA,79670.82,29.33,188.56,1.64%,822322.0
+SCHW,1.0,Charles Schwab Corp,Financial,Capital Markets,USA,147249.91,31.44,80.44,0.31%,3816035.0
+AMD,1.0,Advanced Micro Devices Inc,Technology,Semiconductors,USA,222357.07,122.6,137.02,-1.70%,21175762.0
+TFC,1.0,Truist Financial Corporation,Financial,Banks - Regional,USA,61331.19,,46.2,-0.92%,6765203.0
+GOOGL,1.0,Alphabet Inc,Communication Services,Internet Content & Information,USA,2158959.35,23.31,175.72,-1.35%,10579928.0
+GOOG,1.0,Alphabet Inc,Communication Services,Internet Content & Information,USA,2158467.74,23.5,177.12,-1.37%,8461647.0
+JBLU,1.0,Jetblue Airways Corp,Industrials,Airlines,USA,2084.73,,6.01,0.84%,13959872.0
+UAL,1.0,United Airlines Holdings Inc,Industrials,Airlines,USA,31002.27,11.36,94.27,0.01%,3613225.0
+LW,1.0,Lamb Weston Holdings Inc,Consumer Defensive,Packaged Foods,USA,10765.41,17.72,75.49,0.57%,570537.0
+OR,1.0,Osisko Gold Royalties Ltd,Basic Materials,Gold,Canada,5163.3,,19.83,0.43%,229671.0
+DG,1.0,Dollar General Corp,Consumer Defensive,Discount Stores,USA,16139.57,11.4,73.39,-4.07%,5794042.0
+RH,1.0,RH,Consumer Cyclical,Specialty Retail,USA,6155.48,195.29,333.04,2.89%,605227.0
+WSM,1.0,"Williams-Sonoma, Inc",Consumer Cyclical,Specialty Retail,USA,21985.42,20.9,174.02,26.80%,7180836.0
+AG,1.0,First Majestic Silver Corporation,Basic Materials,Silver,Canada,2751.63,,6.53,-1.95%,7014181.0
+MAG,1.0,MAG Silver Corp,Basic Materials,Silver,Canada,2270.7,21.91,15.73,-0.32%,345147.0
+CTGO,1.0,Contango Ore Inc,Basic Materials,Gold,USA,227.45,,18.6,-3.63%,38506.0
+SVM,1.0,Silvercorp Metals Inc,Basic Materials,Silver,Canada,1074.81,11.9,3.54,-12.72%,13628961.0
+MCD,1.0,McDonald's Corp,Consumer Cyclical,Restaurants,USA,208185.19,25.5,290.51,-0.08%,1616440.0
+EXK,1.0,Endeavour Silver Corp,Basic Materials,Other Precious Metals & Mining,Canada,1542.92,,4.49,-9.01%,11191891.0
+NCLH,1.0,Norwegian Cruise Line Holdings Ltd,Consumer Cyclical,Travel Services,USA,11390.16,25.13,25.9,-1.66%,7672832.0
+HES,1.0,Hess Corporation,Energy,Oil & Gas E&P,USA,45490.58,17.23,147.64,0.96%,378072.0
+AVAV,1.0,AeroVironment Inc,Industrials,Aerospace & Defense,USA,5589.81,93.46,198.18,1.69%,549255.0
+WIX,1.0,Wix.com Ltd,Technology,Software - Infrastructure,Israel,11723.32,169.57,210.68,14.53%,2267516.0
+GLBE,1.0,Global E Online Ltd,Consumer Cyclical,Internet Retail,Israel,8018.97,,48.02,12.35%,4872270.0
+KEYS,1.0,Keysight Technologies Inc,Technology,Scientific & Technical Instruments,USA,28417.72,46.81,163.75,7.64%,2315464.0
+BDX,1.0,Becton Dickinson & Co,Healthcare,Medical Instruments & Supplies,USA,64241.12,37.41,222.26,-0.17%,1000074.0
+FITB,1.0,Fifth Third Bancorp,Financial,Banks - Regional,USA,31200.38,15.52,46.53,0.19%,1711422.0
+POWL,1.0,"Powell Industries, Inc",Industrials,Electrical Equipment & Parts,USA,3118.76,21.18,260.16,-16.72%,1185100.0
+CHTR,1.0,Charter Communications Inc,Communication Services,Telecom Services,USA,110341.06,12.15,387.99,0.82%,360968.0
+INSP,1.0,Inspire Medical Systems Inc,Healthcare,Medical Devices,USA,5532.5,171.53,184.62,4.87%,404569.0
+RRGB,1.0,Red Robin Gourmet Burgers Inc,Consumer Cyclical,Restaurants,USA,78.98,,5.01,-4.47%,172681.0
+CVX,1.0,Chevron Corp,Energy,Oil & Gas Integrated,USA,289452.48,17.73,161.07,0.92%,2869492.0
+AWK,1.0,American Water Works Co. Inc,Utilities,Utilities - Regulated Water,USA,26896.78,27.38,138.01,-0.14%,613403.0
+PBPB,1.0,Potbelly Corp,Consumer Cyclical,Restaurants,USA,288.55,7.71,9.64,-1.75%,73318.0
+CRM,1.0,Salesforce Inc,Technology,Software - Application,USA,311460.03,56.72,325.8,0.73%,2298609.0
+JACK,1.0,"Jack In The Box, Inc",Consumer Cyclical,Restaurants,USA,870.23,,45.5,-1.15%,743196.0
+AVGO,1.0,Broadcom Inc,Technology,Semiconductors,USA,760089.59,141.66,162.74,-1.58%,9661428.0
+SBUX,1.0,Starbucks Corp,Consumer Cyclical,Restaurants,USA,111025.15,29.63,97.97,-0.38%,3556879.0

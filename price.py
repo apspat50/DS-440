@@ -8,6 +8,10 @@ import time
 input_csv_path = "news.csv"
 output_csv_path = "export.csv"
 
+# Clear the output CSV file before inputting new data
+if os.path.exists(output_csv_path):
+    os.remove(output_csv_path)  # Remove the existing file to clear it
+
 # Read the CSV file containing tickers
 try:
     news_df = pd.read_csv(input_csv_path)
@@ -52,14 +56,7 @@ def export_finviz_data(ticker):
         return None
 
 # If export.csv exists, read it into a DataFrame
-if os.path.exists(output_csv_path):
-    try:
-        export_df = pd.read_csv(output_csv_path)
-    except pd.errors.EmptyDataError:
-        print(f"Warning: The file {output_csv_path} is empty or cannot be read.")
-        export_df = pd.DataFrame()  # Create an empty DataFrame if export file is empty
-else:
-    export_df = pd.DataFrame()  # Create an empty DataFrame if export file does not exist
+export_df = pd.DataFrame()  # Create a new empty DataFrame to hold new data
 
 # Sequentially process each ticker and add a sleep time between requests
 for ticker in tickers:
@@ -67,6 +64,10 @@ for ticker in tickers:
     finviz_data = export_finviz_data(ticker)
     
     if finviz_data is not None:
+        # Ensure the 'Ticker' column exists in export_df before checking
+        if 'Ticker' not in export_df.columns:
+            export_df['Ticker'] = pd.Series(dtype='str')  # Add an empty Ticker column if it's missing
+
         # Check if the ticker already exists in the exported DataFrame
         if ticker in export_df['Ticker'].values:
             # Update existing rows

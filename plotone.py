@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.io as pio
 import os
-from PyQt5.QtWidgets import QApplication, QVBoxLayout, QWidget, QComboBox, QPushButton, QLabel, QHBoxLayout
+from PyQt5.QtWidgets import QApplication, QVBoxLayout, QWidget, QComboBox, QPushButton, QLabel, QHBoxLayout, QMessageBox
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtCore import QUrl
 import subprocess 
@@ -95,7 +95,11 @@ class MainWindow(QWidget):
 
     def generate_plot2(self):
         ticker = self.ticker_selector.currentText()
-        
+
+        # Clear the second plot before generating a new one
+        self.plot_viewer2.browser.setUrl(QUrl())  # Clears the current plot (empty URL)
+
+        # Run the necessary scripts to fetch and analyze sentiment data for the selected ticker
         try:
             subprocess.run(['python', 'tickernews.py', ticker], check=True, capture_output=True, text=True)
             subprocess.run(['python', 'analyze.py', ticker], check=True, capture_output=True, text=True)
@@ -103,21 +107,26 @@ class MainWindow(QWidget):
             print(f"Error running scripts: {e}")
             return
 
-        # Read generated sentiment CSV file
+        # Read the generated sentiment CSV file for the selected ticker
         input_sentiment_csv = f"{ticker}_with_sentiment.csv"
         try:
             sentiment_df = pd.read_csv(input_sentiment_csv)
         except Exception as e:
             print(f"Error reading sentiment CSV: {e}")
             return
-        
+
+        # Check if the required columns are present
         if 'Date' not in sentiment_df.columns or 'Combined_Sentiment' not in sentiment_df.columns:
             print("Error: Required columns missing in sentiment data.")
             return
 
-        # Check if there's only one article
+        # If there are no articles, show the no data message and return
+        if sentiment_df.empty:
+            self.show_no_data_message()
+            return
+
+        # If there's only one article, generate a single point plot
         if len(sentiment_df) == 1:
-            # Generate a single point plot if only one article is available
             fig = px.scatter(
                 sentiment_df,
                 x='Date',
@@ -134,10 +143,15 @@ class MainWindow(QWidget):
                 title=f'Combined Sentiment Over Time for {ticker}',
                 labels={'Combined_Sentiment': 'Combined Sentiment', 'Date': 'Date'},
             )
-        
+
+        # Update plot 2 if a valid figure is generated
         if fig:
             self.plot_viewer2.update_plot(fig)
 
+
+    def show_no_data_message(self):
+        """Show a message box indicating no new articles."""
+        QMessageBox.information(self, "No Data", "No new articles to plot for this ticker.", QMessageBox.Ok)
 
 def create_plot(input_sentiment_csv, input_price_csv, y_variable):
     try:
