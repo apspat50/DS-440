@@ -6,9 +6,9 @@ This repository contains Python scripts for analyzing and visualizing stock news
 
 ## Project Overview
 
-1. **`analyze.py`**: Fetches the latest news articles and analyzes sentiment for a stock ticker from FinViz and saves them to CSV files.
+1. **`analyze.py`**: Fetches the latest news articles and analyzes sentiment for an individual stock ticker from FinViz and saves them to CSV files.
 2. **`compilesent.py`**: Calculates the average sentiment score for each ticker. 
-3. **`export.py`**: Exports stock news data from FinViz to a CSV file.
+3. **`export.py`**: Exports stock news data from FinViz.
 4. **`main.py`**: Runs the main application. 
 5. **`plotone.py`**: Plots the average sentiment score for each ticker vs. whatever other variable the user chooses. Plots the daily news sentiment score over time based off the ticker chosen by the user. 
 6. **`price.py`**: Fetches pricing data for the tickers found in export.py.
@@ -20,7 +20,7 @@ This repository contains Python scripts for analyzing and visualizing stock news
 ## Setup
 
 1. **Install Dependencies**:
-   Ensure you have the required Python packages installed. You can install them from your terminal using pip:
+   Ensure you have the required Python packages installed. The application will not work unless they are installed. You can install them from your terminal using pip:
    ```bash
    pip install pandas
    pip install requests
@@ -35,41 +35,13 @@ Update FinViz API Token:
 
 Update the export.py script with your FinViz API token. Delete my API token and put your Finviz API token after this part of the URL code "https://elite.finviz.com/news_export.ashx?v=3&auth=". 
 
-Script Details
-
-**'main.py'**
-
-**plotone.py**
-
-**analyze.py**
-
-**compilesent.py**
-
-**price.py**
-
-**sentiment.py**
-
-**tickernews.py**
-
-**update.py**
-
-**updatesent.py**
-
-**export.py**
-Fetches news articles for specified stock tickers using the FinViz API and saves them to CSV files.
-
-python get_news.py
-
-Script Details:
-
-Fetches news articles for tickers listed in the tickers variable.
-Saves today's articles to individual CSV files for each ticker.
-Checks if files already exist and appends data as needed.
-
 ## Notes:
+
+Main.py is the only file you need to run for the application to work. 
 
 Adjust time intervals in the schedule_tasks section of main.py to fit your needs.
 Make sure you have the necessary API tokens and permissions to access the FinViz data.
+Never try to Gather or Update data while Plotting. 
 For any issues or feature requests, please open an issue on this repository.
 
 ## Acknowledgments:
