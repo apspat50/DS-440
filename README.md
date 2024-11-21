@@ -33,7 +33,7 @@ This repository contains Python scripts for analyzing and visualizing stock news
 
 Update FinViz API Token:
 
-Update the export.py script with your FinViz API token. Delete my API token and put your Finviz API token after this part of the URL code https://elite.finviz.com/news_export.ashx?v=3&auth= . 
+Update the export.py script with your FinViz API token. Delete my API token and put your Finviz API token after this part of the URL code "https://elite.finviz.com/news_export.ashx?v=3&auth=". 
 
 Script Details
 
