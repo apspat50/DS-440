@@ -37,7 +37,7 @@ Update the export.py script with your FinViz API token. Delete my API token and 
 
 Script Details
 
-**`main.py`**
+###**main.py**
 
 **plotone.py**
 
