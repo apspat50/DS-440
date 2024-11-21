@@ -6,16 +6,21 @@ This repository contains Python scripts for analyzing and visualizing stock news
 
 ## Project Overview
 
-1. **`get_news.py`**: Fetches the latest news articles for a list of stock tickers from FinViz and saves them to CSV files.
-2. **`analyze_sentiment.py`**: Analyzes sentiment of news articles and appends sentiment scores to the corresponding CSV files.
-3. **`export.py`**: Exports stock price data from FinViz to a CSV file at regular intervals.
-4. **`bothplot.py`**: Plots combined sentiment scores and stock prices over time for multiple tickers.
-5. **`clear.py`**: Clears the content of all CSV files in a specified directory.
+1. **`analyze.py`**: Fetches the latest news articles and analyzes sentiment for a stock ticker from FinViz and saves them to CSV files.
+2. **`compilesent.py`**: Calculates the average sentiment score for each ticker. 
+3. **`export.py`**: Exports stock news data from FinViz to a CSV file.
+4. **`main.py`**: Runs the main application. 
+5. **`plotone.py`**: Plots the average sentiment score for each ticker vs. whatever other variable the user chooses. Plots the daily news sentiment score over time based off the ticker chosen by the user. 
+6. **`price.py`**: Fetches pricing data for the tickers found in export.py.
+7. **`sentiment.py`**: Analyzes the sentiment from the news articles from export.py.
+8. **`tickernews.py`**: Fetches today's news for a selected ticker. 
+9. **`update.py`**: Checks newly produced news articles and updates them to the list of news articles. 
+10. **`updatesent.py`**: Calculate the new news articles sentiment score. 
 
 ## Setup
 
 1. **Install Dependencies**:
-   Ensure you have the required Python packages installed. You can install them using pip:
+   Ensure you have the required Python packages installed. You can install them from your terminal using pip:
    ```bash
    pip install pandas
    pip install requests
@@ -26,10 +31,10 @@ This repository contains Python scripts for analyzing and visualizing stock news
    pip install plotly
    pip install finvizfinance
 
-   
 Update FinViz API Token:
 
-Update the export.py script with your FinViz API token. Replace the placeholder token in the URL with your actual token.
+Update the export.py script with your FinViz API token. Delete my API token and put your Finviz API token after this part of the URL code https://elite.finviz.com/news_export.ashx?v=3&auth= . 
+
 Script Details
 
 
@@ -46,15 +51,16 @@ Checks if files already exist and appends data as needed.
 
 ## Notes:
 
-Ensure the output directory specified in the scripts exists.
-Adjust time intervals and file paths according to your needs.
+Adjust time intervals in the schedule_tasks section of main.py to fit your needs.
 Make sure you have the necessary API tokens and permissions to access the FinViz data.
 For any issues or feature requests, please open an issue on this repository.
-
 
 ## Acknowledgments:
 
 FinViz API
+Finviz Finance
 BeautifulSoup
 Matplotlib
 PyQt5
+Plotly
+FinVader
