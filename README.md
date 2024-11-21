@@ -38,14 +38,23 @@ Update the export.py script with your FinViz API token. Delete my API token and 
 Script Details
 
 **main.py**
+
 **plotone.py**
+
 **analyze.py**
+
 **compilesent.py**
+
 **price.py**
+
 **sentiment.py**
+
 **tickernews.py**
+
 **update.py**
+
 **updatesent.py**
+
 **export.py**
 Fetches news articles for specified stock tickers using the FinViz API and saves them to CSV files.
 
