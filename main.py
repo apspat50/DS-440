@@ -8,13 +8,37 @@ from PyQt5.QtWidgets import (
     QLabel,
     QMessageBox,
 )
-from PyQt5.QtCore import QTimer
+from PyQt5.QtCore import QTimer, QThread, pyqtSignal
 from datetime import datetime, time
 import pandas as pd
 import subprocess
 import os
 import sys
 import csv
+
+class ScriptRunner(QThread):
+    output_signal = pyqtSignal(str)
+
+    def __init__(self, scripts):
+        super().__init__()
+        self.scripts = scripts
+
+    def run(self):
+        for script in self.scripts:
+            self.output_signal.emit(f"Running {script}...")
+            output = self.run_script(script)
+            self.output_signal.emit(output)
+            self.output_signal.emit("-" * 80)  # Separator for clarity
+
+        self.output_signal.emit("Data ready. You can now run plotone.py.")
+
+    def run_script(self, script_name):
+        """Run a Python script and return the output."""
+        try:
+            result = subprocess.run(['python', script_name], check=True, capture_output=True, text=True)
+            return result.stdout
+        except subprocess.CalledProcessError as e:
+            return f"Error running {script_name}: {e.stderr}"
 
 class PlotOneDialog(QWidget):
     def __init__(self):
@@ -133,7 +157,11 @@ class Dashboard(QWidget):
             "compilesent.py",
         ]
         
-        self.run_scripts(scripts)
+        self.thread = ScriptRunner(scripts)
+        self.thread.output_signal.connect(self.update_output)
+        self.thread.finished.connect(self.on_scripts_finished)
+
+        self.thread.start()  # Start the thread
         self.topten()
 
     def show_loading_and_run_scripts(self):
@@ -156,7 +184,11 @@ class Dashboard(QWidget):
             "compilesent.py",
         ]
         
-        self.run_scripts(scripts)
+        self.thread = ScriptRunner(scripts)
+        self.thread.output_signal.connect(self.update_output)
+        self.thread.finished.connect(self.on_scripts_finished)
+
+        self.thread.start() 
         self.topten()
 
     def run_update_script(self):

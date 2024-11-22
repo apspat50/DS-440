@@ -4,6 +4,11 @@ import requests
 from bs4 import BeautifulSoup
 from finvader import finvader
 import time
+import random
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
 
 # Get the current working directory
 current_dir = os.getcwd()
@@ -15,6 +20,13 @@ output_dir = current_dir
 # Create the output directory if it doesn't exist (optional, since current_dir should always exist)
 os.makedirs(output_dir, exist_ok=True)
 
+# List of user agents for rotation
+user_agents = [
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+]
+
 # Function to analyze sentiment of text
 def analyze_sentiment(text: str) -> float:
     sentiment_result = finvader(text, use_sentibignomics=True, use_henry=True, indicator='compound')
@@ -22,21 +34,27 @@ def analyze_sentiment(text: str) -> float:
 
 # Function to fetch article content from a URL with error handling and retry logic
 def fetch_article_content(url: str, retries: int = 3) -> str:
-    headers = {'User-Agent': 'Mozilla/5.0'}
+    headers = {
+        'User-Agent': random.choice(user_agents),
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Connection': 'keep-alive'
+    }
+    
     for attempt in range(retries):
         try:
-            response = requests.get(url, headers=headers, timeout=10)  # Added timeout for requests
+            response = requests.get(url, headers=headers, timeout=30)  # Increased timeout to 30 seconds
             if response.status_code == 200:
                 soup = BeautifulSoup(response.content, 'html.parser')
                 paragraphs = soup.find_all('p')
                 article_text = ' '.join([para.get_text() for para in paragraphs])
                 return article_text
             else:
-                print(f"Failed to fetch article from {url}: {response.status_code}")
+                logging.warning(f"Failed to fetch article from {url}: {response.status_code}")
                 return ""
         except requests.exceptions.RequestException as e:
-            print(f"Error fetching article from {url}, attempt {attempt + 1}: {e}")
+            logging.error(f"Error fetching article from {url}, attempt {attempt + 1}: {e}")
             time.sleep(2 ** attempt)  # Exponential backoff before retrying
+    logging.error(f"All retries exhausted for URL: {url}")
     return ""  # Return empty string if all retries fail
 
 # Only process news.csv

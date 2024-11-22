@@ -4,6 +4,11 @@ import requests
 from bs4 import BeautifulSoup
 from finvader import finvader
 import time
+import random
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
 
 # Get the current working directory
 current_dir = os.getcwd()
@@ -15,6 +20,13 @@ output_dir = current_dir
 # Create the output directory if it doesn't exist (optional, since current_dir should always exist)
 os.makedirs(output_dir, exist_ok=True)
 
+# List of user agents for rotation
+user_agents = [
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+]
+
 # Function to analyze sentiment of text
 def analyze_sentiment(text: str) -> float:
     sentiment_result = finvader(text, use_sentibignomics=True, use_henry=True, indicator='compound')
@@ -22,21 +34,27 @@ def analyze_sentiment(text: str) -> float:
 
 # Function to fetch article content from a URL with error handling and retry logic
 def fetch_article_content(url: str, retries: int = 3) -> str:
-    headers = {'User-Agent': 'Mozilla/5.0'}
+    headers = {
+        'User-Agent': random.choice(user_agents),
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Connection': 'keep-alive'
+    }
+    
     for attempt in range(retries):
         try:
-            response = requests.get(url, headers=headers, timeout=10)  # Added timeout for requests
+            response = requests.get(url, headers=headers, timeout=30)  # Increased timeout to 30 seconds
             if response.status_code == 200:
                 soup = BeautifulSoup(response.content, 'html.parser')
                 paragraphs = soup.find_all('p')
                 article_text = ' '.join([para.get_text() for para in paragraphs])
                 return article_text
             else:
-                print(f"Failed to fetch article from {url}: {response.status_code}")
+                logging.warning(f"Failed to fetch article from {url}: {response.status_code}")
                 return ""
         except requests.exceptions.RequestException as e:
-            print(f"Error fetching article from {url}, attempt {attempt + 1}: {e}")
+            logging.error(f"Error fetching article from {url}, attempt {attempt + 1}: {e}")
             time.sleep(2 ** attempt)  # Exponential backoff before retrying
+    logging.error(f"All retries exhausted for URL: {url}")
     return ""  # Return empty string if all retries fail
 
 # Only process news.csv
@@ -47,10 +65,10 @@ output_file_path = os.path.join(output_dir, 'news_with_sentiment.csv')
 try:
     news_df = pd.read_csv(input_file_path)
 except pd.errors.EmptyDataError:
-    print(f"Skipping empty file: {input_file_path}")
+    logging.warning(f"Skipping empty file: {input_file_path}")
     exit()
 except FileNotFoundError:
-    print(f"File not found: {input_file_path}")
+    logging.error(f"File not found: {input_file_path}")
     exit()
 
 # Check for required columns
@@ -58,7 +76,7 @@ required_columns = ['Url', 'Title']
 missing_columns = [col for col in required_columns if col not in news_df.columns]
 
 if missing_columns:
-    print(f"Missing columns {missing_columns} in news.csv")
+    logging.error(f"Missing columns {missing_columns} in news.csv")
 else:
     title_sentiments = []
     content_sentiments = []
@@ -71,7 +89,7 @@ else:
     for index, row in news_df.iterrows():
         url = row['Url']
         title = row['Title']
-        print(f"Processing URL: {url}")
+        logging.info(f"Processing URL: {url}")
 
         # Fetch the content and analyze sentiment
         content = fetch_article_content(url)
@@ -97,7 +115,7 @@ else:
     # Retry for URLs with empty sentiments
     for index, row in news_df.iterrows():
         url = row['Url']
-        print(f"Retrying empty sentiment for URL: {url}")
+        logging.info(f"Retrying empty sentiment for URL: {url}")
 
         # Check if the combined sentiment is empty
         if processed_urls[url][2] is None:
@@ -129,18 +147,13 @@ else:
     news_df['Content_Sentiment'] = content_sentiments
     news_df['Combined_Sentiment'] = combined_sentiments
 
-    # Write results to output CSV
+    # Clear the output file before writing new data
     if os.path.isfile(output_file_path):
-        if os.stat(output_file_path).st_size == 0:
-            print(f"File is empty, writing new data: {output_file_path}")
-            news_df.to_csv(output_file_path, index=False)
-        else:
-            print(f"Appending to existing file: {output_file_path}")
-            existing_df = pd.read_csv(output_file_path)
-            combined_df = pd.concat([existing_df, news_df], ignore_index=True)
-            combined_df.to_csv(output_file_path, index=False)
-    else:
-        print(f"Creating new file: {output_file_path}")
-        news_df.to_csv(output_file_path, index=False)
+        os.remove(output_file_path)
+        logging.info(f"Existing file cleared: {output_file_path}")
 
-print("All sentiment analyses have been completed and saved.")
+    # Write results to output CSV
+    logging.info(f"Writing new data to: {output_file_path}")
+    news_df.to_csv(output_file_path, index=False)
+
+logging.info("All sentiment analyses have been completed and saved.")
